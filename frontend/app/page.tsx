@@ -29,7 +29,7 @@ export default function Home() {
             className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-50"
             style={{
               left: `${particle.x}%`,
-              top: `${particle.y}%",
+              top: `${particle.y}%`,
             }}
             animate={{
               y: [0, -100, 0],
