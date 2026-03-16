@@ -68,6 +68,10 @@ export default function ChatPage() {
     fetchConversations()
   }, [router, getToken, fetchConversations])
 
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }, [messages, isTyping])
+
   const loadConversation = async (convId: string) => {
     const token = getToken()
     if (!token) return
