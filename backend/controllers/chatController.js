@@ -56,7 +56,7 @@ const sendMessage = async (req, res) => {
         userId,
         title: message.slice(0, 50) + (message.length > 50 ? '...' : ''),
         messages: [
-          { role: 'system', content: 'You are a helpful, creative, and intelligent AI assistant. Be concise yet comprehensive. Format responses with markdown when helpful.' }
+          { role: 'system', content: process.env.SYSTEM_PROMPT || 'You are a helpful, creative, and intelligent AI assistant. Be concise yet comprehensive. Format responses with markdown when helpful.' }
         ],
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
